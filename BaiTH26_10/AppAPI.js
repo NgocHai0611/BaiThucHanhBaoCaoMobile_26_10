@@ -21,7 +21,7 @@ export default function AppApi() {
 
   useEffect(() => {
     axios
-      .get("https://6494e6aeb08e17c91791736d.mockapi.io/api/book/product")
+      .get("https://671d40ae09103098807ca930.mockapi.io/category")
       .then((respone) => {
         setData(respone.data);
       })
@@ -99,10 +99,10 @@ export default function AppApi() {
             renderItem={({ item }) => (
               <View style={{ marginLeft: 30 }}>
                 <Image
-                  source={{ uri: item.category_img }}
+                  source={{ uri: item.image }}
                   style={styles.imgSizeCategory}
                 ></Image>
-                <Text>{item.category_name}</Text>
+                <Text>{item.name}</Text>
               </View>
             )}
             contentContainerStyle={{
